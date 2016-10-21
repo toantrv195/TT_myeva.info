@@ -23,6 +23,7 @@ class CreateNewsTable extends Migration
             $table->integer('views');
             $table->integer('likes');
             $table->integer('hot_news');
+            $table->string('url');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('cate_id')->unsigned();

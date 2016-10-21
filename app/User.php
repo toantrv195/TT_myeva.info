@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $table = 'users';
-    protected $fillable = ['name','password','email','level'];
+    protected $fillable = ['name', 'password', 'email', 'level'];
     public $timestamps = true;
 
     /**
@@ -27,11 +27,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function news(){
+    public function news()
+    {
         return $this->HasMany('App\News');
     }
 
-    public function comment(){
+    public function comment()
+    {
         return $this->HasMany('App\Comment');
     }
 }
