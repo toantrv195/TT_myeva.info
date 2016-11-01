@@ -24,4 +24,9 @@ class News extends Model
     {
         return $this->belongTo('App\User');
     }
+
+    public function tag()
+    {
+        return $this->HasMany('App\Tag');
+    }
 }
