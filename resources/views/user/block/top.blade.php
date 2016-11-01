@@ -2,8 +2,8 @@
     <div id="top-left">
         <p>
             <?php 
-                $timezone = +7;
-                echo ''.gmdate("H:i:s | d-m-Y ", time() + 3600*($timezone+date("A"))).'';
+                setlocale(LC_ALL, "vi_VN.UTF-8");
+                echo date('l, F, d, Y');
             ?>  
         </p>
     </div>

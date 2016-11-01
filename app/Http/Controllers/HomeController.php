@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\News;
+use Session;
 class HomeController extends Controller
 {
    
     public function index()
     {
-    	$news = DB::table('news')->join('category', 'category.id', '=', 'news.cate_id')->select('news.*', 'category.name')->orderBy('news.id', 'DESC')->paginate(6);
+    	$news = DB::table('news')
+    		->join('category', 'category.id', '=', 'news.cate_id')
+    		->select('news.*', 'category.name')->orderBy('news.id', 'DESC')->paginate(6);
+        
         return view('user.pages.home', compact('news'));
     }
     //category
@@ -25,7 +29,11 @@ class HomeController extends Controller
     {
     	$views = DB::table('news')->select('id', 'views')->where('id', $id)->first();
     	$news = News::find($id);
-    	$news->views = $views->views+1;
+    	if(!Session::has('ISREAD'.$id))
+    	{
+    		Session::put('ISREAD'.$id, 'value');
+    		$news->views +=1;
+    	}
     	$news->save();
 
     	$detail = DB::table('news')->join('category', 'category.id', '=', 'news.cate_id')

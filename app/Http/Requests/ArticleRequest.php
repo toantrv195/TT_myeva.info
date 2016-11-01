@@ -28,9 +28,7 @@ class ArticleRequest extends FormRequest
             'txtTitle' => 'required',
             'txtIntro' => 'required',
             'txtContent' => 'required',
-            'fImages'=>'image',
-            'txturl' => 'required',
-            'tag' => 'required'
+            'fImages'=>'image'
         ];
     }
 
@@ -41,9 +39,7 @@ class ArticleRequest extends FormRequest
             'txtTitle.required' => 'Please Enter Title',
             'txtIntro.required' => 'Please Enter Intro',
             'txtContent.required' => 'Please Enter content',
-            'fImages.image' => 'This File Is Not Images',
-            'txturl.required' => 'Please Enter Url',
-            'tag.required' => 'Please Enter Tag'
+            'fImages.image' => 'This File Is Not Images'  
         ];
     }
 }

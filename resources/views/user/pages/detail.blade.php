@@ -32,6 +32,10 @@
             <p class="content">{!! $detail->content !!}</p>
         </div>
         <div style="clear:both"></div>
+        @if(isset($detail->url))
+            {{-- <iframe width="560" height="315" src="{!! $detail->url !!}" frameborder="0" allowfullscreen></iframe> --}}
+            {!! $detail->url !!}
+        @endif
         <div class="shareface">
             <ul>
 
@@ -41,6 +45,7 @@
                 <li class="like"><a href="#" ><button type="">thich</button></a></li> --}}
             </ul>
         </div>
+        
         <div class="article_dff">
             
             @if(isset($prev))
