@@ -12,7 +12,11 @@ use Auth;
 
 class UserController extends Controller
 {
-    
+    //homeadmin
+    public function gethome()
+    {
+        return view('home');
+    }
 
     public function getlist()
     {

@@ -11,6 +11,9 @@ a{
 	text-decoration:none;
 	color:#000;
 }
+.borderbottom {
+	border-bottom: 3px solid #ca2020;
+}
 
 .header{
 	width:100%;

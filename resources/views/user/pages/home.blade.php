@@ -5,7 +5,7 @@
 			@foreach($news as $item_news)
 			<li id="block">
 				<a href="{!! url('detail',[$item_news->id,$item_news->alias]) !!}"><img src="{!! asset('resources/upload/'.$item_news->image)!!}" alt=""></a>
-				<h3 class="cate"><a href="{!! url('category',[$item_news->cate_id,$item_news->name]) !!}">{!! $item_news->name !!}</a></h3>
+				<h3 class="cate"><a href="{!! url('category',[$item_news->name]) !!}">{!! $item_news->name !!}</a></h3>
 				<h3 class="title"><a href="{!! url('detail',[$item_news->id,$item_news->alias]) !!}">{!! $item_news->title !!}</a></h3>
 				<span class="date-time"> 
 					{{ $item_news->created_at }}

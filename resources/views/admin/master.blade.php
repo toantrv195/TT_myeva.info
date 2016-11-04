@@ -75,6 +75,20 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                       <i>Language</i>  <i class="fa fa-caret-down"></i> 
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                       <li><a href="{{URL::asset('')}}admin/language/vi">Vietnamese</a></li>
+                        <li><a href="{{URL::asset('')}}admin/language/en">English</a></li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -91,29 +105,29 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="{{ route('homeadmin') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> {{ trans('home.category') }}<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.cate.list') !!}">List Category</a>
+                                    <a href="{!! route('admin.cate.list') !!}">{{ trans('home.list category') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{!! route('admin.cate.getadd') !!}">Add Category</a>
+                                    <a href="{!! route('admin.cate.getadd') !!}">{{ trans('home.add category') }}</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         
                         <li>
-                            <a href="#"><i class="fa fa-cube fa-fw"></i> Article<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-cube fa-fw"></i>{{ trans('home.article') }}<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.article.list') !!}">List article</a>
+                                    <a href="{!! route('admin.article.list') !!}">{{ trans('home.list article') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{!! route('admin.article.getadd') !!}">Add article</a>
+                                    <a href="{!! route('admin.article.getadd') !!}">{{ trans('home.add article') }}</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -121,34 +135,34 @@
                         <!-- Popup -->
                          
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Popup<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> {{ trans('home.popup') }} <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.popup.list') !!}">List Popup</a>
+                                    <a href="{!! route('admin.popup.list') !!}">{{ trans('home.list popup') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{!! route('admin.popup.getadd') !!}">Add Popup</a>
+                                    <a href="{!! route('admin.popup.getadd') !!}">{{ trans('home.add popup') }}</a>
                                 </li>
                             </ul>
                         </li>
                         <!-- end Popup -->
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> {{ trans('home.user') }}<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.user.list') !!}">List User</a>
+                                    <a href="{!! route('admin.user.list') !!}">{{ trans('home.list user') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{!! route('admin.user.getadd') !!}">Add User</a>
+                                    <a href="{!! route('admin.user.getadd') !!}">{{ trans('home.add user') }}r</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-cube fa-fw"></i>Tags<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-cube fa-fw"></i>{{ trans('home.tags') }}<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.tag.list') !!}">List Tags</a>
+                                    <a href="{!! route('admin.tag.list') !!}">{{ trans('home.list tags') }}</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

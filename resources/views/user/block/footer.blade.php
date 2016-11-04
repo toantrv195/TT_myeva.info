@@ -40,7 +40,7 @@
                     <?php $cate = DB::table('category')->where('parent_id', 0)->orderBy('id', 'ASC')->get(); ?>
 					<li><a href="{!! url('/') !!}">home</a></li>
 					@foreach($cate as $item)
-                    <li><a href="{!! url('category',[$item->id, $item->alias]) !!}">{!! $item->name !!}</a><li>
+                    <li><a href="{!! url('category',[$item->alias]) !!}">{!! $item->name !!}</a><li>
                     @endforeach
 				</ul>
 			</div>
